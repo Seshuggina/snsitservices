@@ -17,9 +17,12 @@
 
 .navbar-light .navbar-brand {
     font-size: 30px;
-    color: #00366f;
+    color: #00366f; 
     &:hover {
         color: #00366f;
+    }
+    img {
+        width: 65px;
     }
 }
 
@@ -29,20 +32,17 @@
     padding: 10px 0;
 }
 
-
 #header .logo img {
     padding: 0;
     margin: 7px 0;
     max-height: 26px;
 }
 
-
 /*--------------------------------------------------------------
   # Navigation Menu
   --------------------------------------------------------------*/
 
-
-  .navbar-light .navbar-nav {
+.navbar-light .navbar-nav {
     .nav-link {
         color: #004289;
         padding: 10px 15px;
@@ -55,7 +55,7 @@
             color: #007bff;
         }
     }
-    .active>.nav-link {
+    .active > .nav-link {
         color: #007bff;
     }
 }
@@ -227,4 +227,31 @@
 
 .mobile-nav-active .mobile-nav-toggle i {
     color: #fff;
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .dropdown-menu {
+        position: fixed;
+        top: 67px;
+        left: -2px;
+        width: 101%;
+        border-radius: 0;
+        grid-template-columns: repeat(8, 1fr);
+        
+    }
+    .dropdown-menu.show {
+        display: grid;
+    }
+}
+
+@media (max-width:  990px) {
+    .navbar {
+        padding: 0 20px;
+        height: auto;
+    }
+    .navbar-light .navbar-brand {
+        img {
+            width: 50px;
+        }
+    }
 }

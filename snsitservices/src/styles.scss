@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+// $fa-font-path: "../node_modules/font-awesome/fonts";
+// @import "../node_modules/font-awesome/scss/font-awesome.scss";
+
+h1, h2, h3, h4, h5, h6 {
+    color: #00366f;
+}
+
+a {
+    color: #004289;
+    &:hover {
+        color: #004289;
+    }
+    .links-white-bg & {
+        &:hover {
+            color: #004289;
+        }
+    }
+    &.blue-link {
+        color: #fff;
+        &:hover {
+            text-shadow: 0px 0px 2px #fff;
+        }
+    }
+}
+
+.course-details {
+    p + ul {
+        margin-top: -1em;
+    }
+}

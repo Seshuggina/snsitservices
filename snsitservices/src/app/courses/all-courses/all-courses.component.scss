@@ -1,0 +1,19 @@
+.courses {
+    padding-top: 20px;
+    [class^="col-sm-"] {
+        margin-bottom: 30px;
+    }
+    .card {
+        height: 100%;
+        img {
+            height: 125px;
+        }
+    }
+    .card-body {
+        display: flex;
+        flex-direction: column;
+    }
+    .card-text {
+        flex-grow: 1;
+    }
+}

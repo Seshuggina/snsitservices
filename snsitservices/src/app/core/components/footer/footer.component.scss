@@ -144,3 +144,19 @@
   #footer .credits a:hover {
     color: #f1f7ff;
   }
+
+
+ .whatsapp_float{
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:40px;
+    right:30px;
+    background-color:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:38px;
+    box-shadow: 2px 2px 3px #999;
+    z-index:100;
+  }
