@@ -8,12 +8,14 @@ import { HomeComponent } from './home/home.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { RouterModule } from '@angular/router';
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
