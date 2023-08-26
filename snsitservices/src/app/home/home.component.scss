@@ -1,65 +1,95 @@
 #intro {
-    width: 100%;
-    position: relative;
-    background: url("../../assets/img/intro-bg.png") center bottom no-repeat;
-    background-size: cover;
-    padding: 200px 0 120px 0;
+  width: 100%;
+  position: relative;
+  background: url("../../assets/img/intro-bg.png") center bottom no-repeat;
+  background-size: cover;
+  padding: 120px 0 120px 0;
+  @media (max-width: 991px) {
+    padding: 50px 0 50px 0;
   }
+  .container {
+    display: flex;
+    @media (max-width: 991px) {
+      flex-direction: column;
+    }
+  }
+  .intro-info,
+  .intro-img {
+    flex-grow: 1;
+    flex-basis: 0;
+    min-width: 0;
+  }
+
+  .intro-info {
+    h2 {
+      color: #fff;
+      margin-bottom: 40px;
+      font-size: 48px;
+      font-weight: 700;
+      @media (max-width: 991px) {
+        margin-bottom: 25px;
+      }
+      @media (max-width: 768px) {
+        font-size: 28px;
+      }
+      span {
+        color: #74b5fc;
+        text-decoration: underline;
+      }
+    }
+    .btn-services,
+    .btn-get-started {
+      font-family: "Montserrat", sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      display: inline-block;
+      padding: 10px 32px;
+      border-radius: 50px;
+      transition: 0.5s;
+      margin: 0 20px 20px 0;
+      color: #fff;
+    }
+    .btn-get-started {
+      background: #007bff;
+      border: 2px solid #007bff;
+      color: #fff;
+    }
+    .btn-get-started:hover {
+      background: none;
+      border-color: #fff;
+      color: #fff;
+    }
+    .btn-services {
+      border: 2px solid #fff;
+    }
+    .btn-services:hover {
+      background: #007bff;
+      border-color: #007bff;
+      color: #fff;
+    }
+  }
+}
+
+.home-services-thumbnail {
   
-  #intro .intro-img {
-    width: 50%;
-    float: right;
+  padding: 20px 0 25px;
+  margin: 20px 0;
+  &.services {
+    background-color: #0069D9;
   }
-  
-  #intro .intro-info {
-    width: 50%;
-    float: left;
+}
+
+.home-services-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
-  
-  #intro .intro-info h2 {
-    color: #fff;
-    margin-bottom: 40px;
-    font-size: 48px;
-    font-weight: 700;
+  .thumbnail {
+    border-radius: 8px;
+    background: white;
+    padding: 20px;
   }
-  
-  #intro .intro-info h2 span {
-    color: #74b5fc;
-    text-decoration: underline;
-  }
-  
-  #intro .intro-info .btn-get-started,
-  #intro .intro-info .btn-services {
-    font-family: "Montserrat", sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    display: inline-block;
-    padding: 10px 32px;
-    border-radius: 50px;
-    transition: 0.5s;
-    margin: 0 20px 20px 0;
-    color: #fff;
-  }
-  
-  #intro .intro-info .btn-get-started {
-    background: #007bff;
-    border: 2px solid #007bff;
-    color: #fff;
-  }
-  
-  #intro .intro-info .btn-get-started:hover {
-    background: none;
-    border-color: #fff;
-    color: #fff;
-  }
-  
-  #intro .intro-info .btn-services {
-    border: 2px solid #fff;
-  }
-  
-  #intro .intro-info .btn-services:hover {
-    background: #007bff;
-    border-color: #007bff;
-    color: #fff;
-  }
+}
